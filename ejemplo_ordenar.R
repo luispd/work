@@ -1,0 +1,10 @@
+hosp<-c('hdh','gth','abb','acb','zwa','dda','rth','raq','sss')
+hosp<-c(hosp,'hdh','eth','nbb','gjb','qwa','daz','wth','rgg','fss')
+ranks<-c(3,6,12,43,25,99,11,31,6,25,12,25,12,99)
+ranks<-c(ranks,25)
+ranks<-c(ranks,2)
+ranks<-c(ranks,12)
+ranks<-c(ranks,25)
+a<-cbind.data.frame(ranks,hosp)
+a$hosp<-as.character(a$hosp)
+a[order(a$ranks,a$hosp),]
