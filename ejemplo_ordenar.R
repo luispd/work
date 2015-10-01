@@ -5,6 +5,11 @@ ranks<-c(ranks,25)
 ranks<-c(ranks,2)
 ranks<-c(ranks,12)
 ranks<-c(ranks,25)
-a<-cbind.data.frame(ranks,hosp)
+states<-c("TX","UT","NM","NM","UT","CL","NM","WA","CL","NM","NM","CL","WA")
+states<-c(states,"NM","TX","UT","NM","NM")
+a<-cbind.data.frame(ranks,hosp,states)
 a$hosp<-as.character(a$hosp)
-a[order(a$ranks,a$hosp),]
+lista<-a[order(a$states,a$ranks),]
+lista<-split(lista,lista$states)
+l2<-lapply(lista,function(e) {e[1,]})
+unsplit(l2,as.factor(names(l2)))
