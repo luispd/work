@@ -43,7 +43,7 @@ parser.add_argument(
     action="store_true",
     help="If this flag is used a SQLAlchemy DB URI is generated to use a local db.",
 )
-
+# Test comment
 parser.set_defaults(use_test_config=False)
 
 if __name__ == "__main__":
