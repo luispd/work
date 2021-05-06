@@ -3,7 +3,7 @@ cryptography
 Flask==1.1.1
 eventlet==0.24.1
 gunicorn==19.9.0
-Flask-Cors==3.0.7
+Flask-Cors==3.0.9
 Flask-Executor==0.9.3
 itsdangerous==1.1.0
 Flask-Sockets==0.2.1
